@@ -35,13 +35,15 @@
             this.darkbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // watbtn
             // 
             this.watbtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.watbtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.watbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.watbtn.Location = new System.Drawing.Point(347, 651);
             this.watbtn.Name = "watbtn";
@@ -53,6 +55,7 @@
             // 
             // snabtn
             // 
+            this.snabtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.snabtn.Location = new System.Drawing.Point(587, 651);
             this.snabtn.Name = "snabtn";
             this.snabtn.Padding = new System.Windows.Forms.Padding(4);
@@ -63,6 +66,7 @@
             // 
             // rstbtn
             // 
+            this.rstbtn.Font = new System.Drawing.Font("Segoe UI", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rstbtn.Location = new System.Drawing.Point(827, 651);
             this.rstbtn.Name = "rstbtn";
             this.rstbtn.Padding = new System.Windows.Forms.Padding(4);
@@ -73,6 +77,7 @@
             // 
             // hlpbtn
             // 
+            this.hlpbtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.hlpbtn.Location = new System.Drawing.Point(1067, 651);
             this.hlpbtn.Name = "hlpbtn";
             this.hlpbtn.Padding = new System.Windows.Forms.Padding(4);
@@ -96,39 +101,53 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(347, 55);
+            this.label1.Location = new System.Drawing.Point(648, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(741, 86);
+            this.label1.Size = new System.Drawing.Size(288, 86);
             this.label1.TabIndex = 6;
-            this.label1.Text = "OMRON AUTOMATION";
+            this.label1.Text = "OMRON";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 19.875F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(600, 174);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(693, 139);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(187, 71);
             this.label2.TabIndex = 7;
             this.label2.Text = "SPEED";
             // 
+            // hScrollBar1
+            // 
+            this.hScrollBar1.Location = new System.Drawing.Point(347, 437);
+            this.hScrollBar1.Name = "hScrollBar1";
+            this.hScrollBar1.Padding = new System.Windows.Forms.Padding(10);
+            this.hScrollBar1.Size = new System.Drawing.Size(920, 70);
+            this.hScrollBar1.TabIndex = 9;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(167, 432);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.Lime;
+            this.label3.Location = new System.Drawing.Point(347, 371);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(315, 59);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Optimal Speed";
+            this.label3.Size = new System.Drawing.Size(91, 45);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "LOW";
             // 
-            // hScrollBar1
+            // label4
             // 
-            this.hScrollBar1.Location = new System.Drawing.Point(537, 432);
-            this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Padding = new System.Windows.Forms.Padding(10);
-            this.hScrollBar1.Size = new System.Drawing.Size(820, 70);
-            this.hScrollBar1.TabIndex = 9;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(1164, 371);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 45);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "HIGH";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // Form1
             // 
@@ -136,8 +155,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1524, 959);
-            this.Controls.Add(this.hScrollBar1);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.hScrollBar1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.darkbtn);
@@ -161,7 +181,8 @@
         private Button darkbtn;
         private Label label1;
         private Label label2;
-        private Label label3;
         private HScrollBar hScrollBar1;
+        private Label label3;
+        private Label label4;
     }
 }

@@ -20,14 +20,30 @@ namespace omron
             {
                 this.BackColor = Color.White;
                 darkbtn.Text = "Dark Mode";
+                label1.ForeColor = Color.Black;
+                label2.ForeColor = Color.Black;
                 isClicked = false;
+                
             }
             else
             {
                 this.BackColor = Color.FromArgb(64, 66, 88);
                 darkbtn.Text = "Light Mode";
+                label1.ForeColor = Color.White;
+                label2.ForeColor = Color.White;
                 isClicked = true;
+                
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
